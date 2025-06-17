@@ -112,7 +112,6 @@
 }
 .main_slide div:nth-child(1) span{
     color: rgb(253, 57, 8);
-    text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-color: rgb(253, 176, 34);
 }

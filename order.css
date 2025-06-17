@@ -8,7 +8,21 @@
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
 .header {
     display: flex;
     justify-content: space-between;
@@ -54,6 +68,10 @@
     margin-left: 20px;
 }
 
+.account ul li:hover{
+    color: rgb(253, 57, 8);
+}
+
 .search {
     display: none;
     position: absolute;
@@ -78,117 +96,73 @@
     display: none;
 }
 
-.about-section {
-    padding: 40px 7vw;
+#hdcross {
+    display: none;
+}
+.home{
     background-color: rgb(248, 232, 217);
-    text-align: center;
+    padding: 0 7vw;
 }
 
-.about-section h1 {
-    font-size: 32px;
-    color: rgb(11, 4, 2);
-    margin-bottom: 20px;
-}
 
-.about-content {
+.order-container {
+    max-width: 1000px;
+    margin: 40px auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.about-content .about-text {
-    flex: 1;
-    margin-right: 20px;
-    font-size: 16px;
-    color: rgb(85, 85, 85);
-}
-
-.about-content .about-image img {
+.order-image img {
     width: 100%;
     max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    
-}
-.team-section {
-    padding: 40px;
-    text-align: center;
-    background-color: #f7f7f7;
+    height: auto;
+    object-fit: cover;
 }
 
-.team-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+.order-details {
+    flex: 1;
+    padding: 30px;
+}
+
+.order-details h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
     color: #333;
 }
 
-.team-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px; /* spacing between cards */
+.order-details p {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: #555;
 }
 
-.team-card {
-    width: 230px;
-    text-align: center;
-    font-family: sans-serif;
-    margin: 10px;
-}
-
-.image-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.image-container:hover img {
-    transform: scale(1.05);
-}
-
-.overlay {
-    position: absolute;
-    bottom: -100%; /* Start hidden below */
-    left: 0;
-    right: 0;
-    background: rgba(247, 244, 244, 0.75);
-    color: #fff; /* white text */
-    padding: 15px;
-    transition: bottom 0.4s ease;
-    text-align: center;
-}
-
-.image-container:hover .overlay {
-    bottom: 0; /* Slide up on hover */
-}
-
-.story-section {
-    padding: 40px 7vw;
-    background-color: rgb(248, 232, 217);
-    text-align: center;
-}
-
-.story-section h2 {
-    font-size: 28px;
-    color: rgb(14, 4, 1);
+.price {
+    font-weight: bold;
+    color: #e67e22;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
-.story-section p {
+.order-button {
+    padding: 12px 30px;
+    background-color: #e67e22;
+    color: white;
     font-size: 16px;
-    color: black;
-    line-height: 1.8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
+.order-button:hover {
+    background-color: #d35400;
+}
+
+/* Footer (optional if you already styled it elsewhere) */
 .footer {
     background-color: rgb(248, 232, 217);
     padding: 20px 7vw;
@@ -242,8 +216,9 @@
 }
 
 .footer-bottom {
-    margin-top: 15px;
     font-size: 12px;
     color: rgb(119, 119, 119);
+    padding: 10px 0 0;
+    margin: 0;
+    text-align: center;
 }
-    
